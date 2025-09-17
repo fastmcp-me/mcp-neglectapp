@@ -60,7 +60,7 @@ Example: https://api.neglect.trade/mcp?apiKey=YOUR_API_KEY
 ## 🧑‍💻 Author
 
 Built and maintained by **Neglect**  
-- Website: [https://neglect.trade](https://neglect.trade)  
+- Website: [https://neglect.trade](https://neglect.trade/)  
 - GitHub: [609NFT](https://github.com/609NFT)
 
 ---
