@@ -38,21 +38,23 @@ For detailed instructions, see the [Authentication Docs](https://docs.neglect.tr
 
 ---
 
+## 🗝️ Getting an API Key
+
+To use this MCP server, you’ll need a Neglect API key:  
+
+1. Go to the [Developer Portal](https://neglect.trade/developers).  
+2. Sign in or create an account.  
+3. Generate a new API key from your dashboard.  
+4. Pass this key as a query parameter when connecting to the MCP server.  
+
+Example: https://api.neglect.trade/mcp?apiKey=YOUR_API_KEY
+
+---
+
 ## 📖 Documentation
 
 - [Neglect Data Services](https://docs.neglect.trade/products/data-services)  
 - [MCP Server Docs](https://docs.neglect.trade/products/data-services/mcp-server)
-
----
-
-## 🚀 Getting Started with MCP Clients
-
-If you’re using an MCP-compatible client (e.g. GitHub Copilot, Claude Desktop, or others), you can connect directly by selecting:
-
-trade.neglect/mcp-server
-
-
-and providing your API key.
 
 ---
 
@@ -66,4 +68,4 @@ Built and maintained by **Neglect**
 
 ## 📜 License
 
-MIT
+[MIT](https://opensource.org/licenses/MIT)
