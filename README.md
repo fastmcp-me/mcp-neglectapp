@@ -42,10 +42,9 @@ For detailed instructions, see the [Authentication Docs](https://docs.neglect.tr
 
 To use this MCP server, you’ll need a Neglect API key:  
 
-1. Go to the [Developer Portal](https://neglect.trade/developers).  
-2. Sign in or create an account.  
-3. Generate a new API key from your dashboard.  
-4. Pass this key as a query parameter when connecting to the MCP server.  
+1. Go to the [Neglect Developer Dashboard](https://neglect.trade/developers).  
+2. Choose the plan that fits your needs and complete checkout.  
+3. Once your plan is active, your API key will be automatically generated and available in your dashboard. 
 
 Example: https://api.neglect.trade/mcp?apiKey=YOUR_API_KEY
 
