@@ -2,7 +2,7 @@
   <img src="https://neglect.trade/Neglect_Banner.jpg" alt="Neglect Banner" width="100%"/>
 </p>
 
-# Neglect Solana DeFi MCP Server
+# Neglect's Solana DeFi MCP Server
 
 ⚡ Full Solana DeFi coverage: launchpads, tokens, trades, and wallets — decoded at scale & accessible via LLMs.
 
