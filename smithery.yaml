@@ -10,151 +10,246 @@ tools:
   - name: getTokenMetadata
     description: Retrieve detailed metadata for a token
     input:
-      tokenAddress: string
+      tokenAddress:
+        type: string
     output:
-      address: string
-      name: string
-      symbol: string
-      description: string
-      image: string
-      website: string
-      twitter: string
-      telegram: string
-      discord: string
-      supply: number
-      decimals: integer
-      devWallet: string
+      address:
+        type: string
+      name:
+        type: string
+      symbol:
+        type: string
+      description:
+        type: string
+      image:
+        type: string
+      website:
+        type: string
+      twitter:
+        type: string
+      telegram:
+        type: string
+      discord:
+        type: string
+      supply:
+        type: number
+      decimals:
+        type: integer
+      devWallet:
+        type: string
 
   - name: getTokenMarketData
     description: Get market-level metrics for a token
     input:
-      tokenAddress: string
-      interval: string
+      tokenAddress:
+        type: string
+      interval:
+        type: string
     output:
-      price: number
-      mcap: number
-      liquidity: number
-      holdersCount: integer
-      txns: integer
-      volume: number
-      buys: integer
-      sells: integer
+      price:
+        type: number
+      mcap:
+        type: number
+      liquidity:
+        type: number
+      holdersCount:
+        type: integer
+      txns:
+        type: integer
+      volume:
+        type: number
+      buys:
+        type: integer
+      sells:
+        type: integer
 
   - name: getTokenPrice
     description: Get the latest price, market cap, and liquidity for a token
     input:
-      tokenAddress: string
+      tokenAddress:
+        type: string
     output:
-      price: number
-      mcap: number
-      liquidity: number
+      price:
+        type: number
+      mcap:
+        type: number
+      liquidity:
+        type: number
 
   - name: getTokenHistory
     description: Fetch historical metrics for a token across multiple time windows
     input:
-      token: string
-      metrics: array
+      token:
+        type: string
+      metrics:
+        type: array
+        items:
+          type: string
     output:
-      history: object
+      history:
+        type: object
 
   - name: getTokenHistoryRange
     description: Returns lowest and highest values of selected metrics within a time range
     input:
-      tokenAddress: string
-      time_from: number
-      time_to: number
-      metrics: array
+      tokenAddress:
+        type: string
+      time_from:
+        type: number
+      time_to:
+        type: number
+      metrics:
+        type: array
+        items:
+          type: string
     output:
-      price: object
-      mcap: object
-      liquidity: object
+      price:
+        type: object
+      mcap:
+        type: object
+      liquidity:
+        type: object
 
   - name: getTokenPerformance
     description: Returns percentage change for selected metrics across multiple time windows
     input:
-      token: string
-      metrics: array
+      token:
+        type: string
+      metrics:
+        type: array
+        items:
+          type: string
     output:
-      performance: object
+      performance:
+        type: object
 
   - name: getTokenATH
     description: Get all-time high market cap for a token
     input:
-      tokenAddress: string
+      tokenAddress:
+        type: string
     output:
-      ath: number
-      timestamp: string
+      ath:
+        type: number
+      timestamp:
+        type: string
 
   - name: getTokenHolders
     description: Returns holder wallet addresses and ownership percentages for a token
     input:
-      tokenAddress: string
-      limit: integer
+      tokenAddress:
+        type: string
+      limit:
+        type: integer
     output:
-      holders: array
+      holders:
+        type: array
+        items:
+          type: object
 
   - name: getTrendingTokens
     description: List trending tokens by transaction count
     input:
-      interval: string
+      interval:
+        type: string
     output:
-      tokens: array
+      tokens:
+        type: array
+        items:
+          type: object
 
   - name: searchTokens
     description: Search for tokens by name, symbol, or address
     input:
-      searchQuery: string
-      limit: integer
-      sortBy: string
-      sortOrder: string
-      symbolOnly: boolean
+      searchQuery:
+        type: string
+      limit:
+        type: integer
+      sortBy:
+        type: string
+      sortOrder:
+        type: string
+      symbolOnly:
+        type: boolean
     output:
-      tokens: array
+      tokens:
+        type: array
+        items:
+          type: object
 
   - name: getGraduatedTokens
     description: Fetch the most recently graduated tokens
     input:
-      limit: integer
+      limit:
+        type: integer
     output:
-      tokens: array
+      tokens:
+        type: array
+        items:
+          type: object
 
   - name: getTokenByPool
     description: Fetch token metadata for a given pool address
     input:
-      poolAddress: string
+      poolAddress:
+        type: string
     output:
-      address: string
-      name: string
-      symbol: string
-      createdAt: string
-      marketAddress: string
-      bondingAddress: string
+      address:
+        type: string
+      name:
+        type: string
+      symbol:
+        type: string
+      createdAt:
+        type: string
+      marketAddress:
+        type: string
+      bondingAddress:
+        type: string
 
   - name: getWalletHoldings
     description: Retrieve the token holdings of a given wallet
     input:
-      walletAddress: string
-      limit: integer
+      walletAddress:
+        type: string
+      limit:
+        type: integer
     output:
-      wallet: string
-      count: integer
-      tokens: array
+      wallet:
+        type: string
+      count:
+        type: integer
+      tokens:
+        type: array
+        items:
+          type: object
 
   - name: getWalletTokenPnL
     description: Calculate realized and unrealized PnL for a wallet on a specific token
     input:
-      walletAddress: string
-      tokenAddress: string
+      walletAddress:
+        type: string
+      tokenAddress:
+        type: string
     output:
-      realized: number
-      unrealized: number
-      total: number
-      cost_basis: number
+      realized:
+        type: number
+      unrealized:
+        type: number
+      total:
+        type: number
+      cost_basis:
+        type: number
 
   - name: getTokensByDeployer
     description: Get tokens deployed by a specific wallet
     input:
-      walletAddress: string
-      limit: integer
+      walletAddress:
+        type: string
+      limit:
+        type: integer
     output:
-      tokens: array
+      tokens:
+        type: array
+        items:
+          type: object
