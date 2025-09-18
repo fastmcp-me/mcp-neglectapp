@@ -1,9 +1,0 @@
-{
-  "name": "solana-mcp",
-  "version": "1.0.0",
-  "description": "Stub package for Solana MCP (remote server only)",
-  "main": "index.js",
-  "scripts": {
-    "build": "echo 'No build needed for remote MCP server'"
-  }
-}
