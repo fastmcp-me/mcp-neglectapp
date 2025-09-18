@@ -1,0 +1,160 @@
+id: 609NFT/solana-mcp
+name: Solana MCP Server
+description: Remote MCP server exposing Solana DeFi data — tokens, wallets, history, and PnL — decoded and normalized at scale.
+repository: https://github.com/609NFT/solana-mcp
+
+entry: https://api.neglect.trade/mcp
+language: remote
+
+tools:
+  - name: getTokenMetadata
+    description: Retrieve detailed metadata for a token
+    input:
+      tokenAddress: string
+    output:
+      address: string
+      name: string
+      symbol: string
+      description: string
+      image: string
+      website: string
+      twitter: string
+      telegram: string
+      discord: string
+      supply: number
+      decimals: integer
+      devWallet: string
+
+  - name: getTokenMarketData
+    description: Get market-level metrics for a token
+    input:
+      tokenAddress: string
+      interval: string
+    output:
+      price: number
+      mcap: number
+      liquidity: number
+      holdersCount: integer
+      txns: integer
+      volume: number
+      buys: integer
+      sells: integer
+
+  - name: getTokenPrice
+    description: Get the latest price, market cap, and liquidity for a token
+    input:
+      tokenAddress: string
+    output:
+      price: number
+      mcap: number
+      liquidity: number
+
+  - name: getTokenHistory
+    description: Fetch historical metrics for a token across multiple time windows
+    input:
+      token: string
+      metrics: array
+    output:
+      history: object
+
+  - name: getTokenHistoryRange
+    description: Returns lowest and highest values of selected metrics within a time range
+    input:
+      tokenAddress: string
+      time_from: number
+      time_to: number
+      metrics: array
+    output:
+      price: object
+      mcap: object
+      liquidity: object
+
+  - name: getTokenPerformance
+    description: Returns percentage change for selected metrics across multiple time windows
+    input:
+      token: string
+      metrics: array
+    output:
+      performance: object
+
+  - name: getTokenATH
+    description: Get all-time high market cap for a token
+    input:
+      tokenAddress: string
+    output:
+      ath: number
+      timestamp: string
+
+  - name: getTokenHolders
+    description: Returns holder wallet addresses and ownership percentages for a token
+    input:
+      tokenAddress: string
+      limit: integer
+    output:
+      holders: array
+
+  - name: getTrendingTokens
+    description: List trending tokens by transaction count
+    input:
+      interval: string
+    output:
+      tokens: array
+
+  - name: searchTokens
+    description: Search for tokens by name, symbol, or address
+    input:
+      searchQuery: string
+      limit: integer
+      sortBy: string
+      sortOrder: string
+      symbolOnly: boolean
+    output:
+      tokens: array
+
+  - name: getGraduatedTokens
+    description: Fetch the most recently graduated tokens
+    input:
+      limit: integer
+    output:
+      tokens: array
+
+  - name: getTokenByPool
+    description: Fetch token metadata for a given pool address
+    input:
+      poolAddress: string
+    output:
+      address: string
+      name: string
+      symbol: string
+      createdAt: string
+      marketAddress: string
+      bondingAddress: string
+
+  - name: getWalletHoldings
+    description: Retrieve the token holdings of a given wallet
+    input:
+      walletAddress: string
+      limit: integer
+    output:
+      wallet: string
+      count: integer
+      tokens: array
+
+  - name: getWalletTokenPnL
+    description: Calculate realized and unrealized PnL for a wallet on a specific token
+    input:
+      walletAddress: string
+      tokenAddress: string
+    output:
+      realized: number
+      unrealized: number
+      total: number
+      cost_basis: number
+
+  - name: getTokensByDeployer
+    description: Get tokens deployed by a specific wallet
+    input:
+      walletAddress: string
+      limit: integer
+    output:
+      tokens: array
