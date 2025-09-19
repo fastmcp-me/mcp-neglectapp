@@ -20,6 +20,18 @@ This MCP server provides structured, real-time access to the **entire Solana DeF
 
 ---
 
+## 🗝️ Getting an API Key
+
+To use this MCP server, you’ll need a Neglect API key:  
+
+1. Go to the [Neglect Developer Dashboard](https://neglect.trade/developers).  
+2. Choose the plan that fits your needs and complete checkout.  
+3. Once your plan is active, your API key will be automatically generated and available in your dashboard. 
+
+Example: https://api.neglect.trade/mcp?apiKey=YOUR_API_KEY
+
+---
+
 ## 📡 Endpoints
 
 The server is hosted at:
@@ -39,18 +51,6 @@ You must provide your Neglect API key as a **query parameter**:
 
 
 For detailed instructions, see the [Authentication Docs](https://docs.neglect.trade/products/data-services/authentication).
-
----
-
-## 🗝️ Getting an API Key
-
-To use this MCP server, you’ll need a Neglect API key:  
-
-1. Go to the [Neglect Developer Dashboard](https://neglect.trade/developers).  
-2. Choose the plan that fits your needs and complete checkout.  
-3. Once your plan is active, your API key will be automatically generated and available in your dashboard. 
-
-Example: https://api.neglect.trade/mcp?apiKey=YOUR_API_KEY
 
 ---
 
