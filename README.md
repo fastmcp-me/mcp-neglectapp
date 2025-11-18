@@ -64,8 +64,8 @@ For detailed instructions, see the [Authentication Docs](https://docs.neglect.tr
 ## 🧑‍💻 Author
 
 Built and maintained by **Neglect**  
-- Website: [https://neglect.trade](https://neglect.trade/)  
-- GitHub: [609NFT](https://github.com/609NFT)
+- Website: [https://neglect.trade](https://neglect.trade/) 
+- GitHub: [Neglect]([https://github.com/609NFT](https://github.com/NeglectApp))
 
 ---
 
